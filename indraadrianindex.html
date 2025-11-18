@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Indra</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(45deg, #222, #333, #444);
+      background-size: 200% 200%;
+      animation: gradientAnimation 10s ease infinite;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+    .header h1 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 2.5em;
+      color: #eee;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      margin: 0;
+    }
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .header-nav a {
+      color: #ddd;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border: 2px solid #555;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      font-size: 1.1em;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .header-nav a:hover {
+      background-color: #555;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.8);
+    }
+    .welcome-section {
+      text-align: center;
+      padding: 80px 20px;
+      color: #fff;
+    }
+    .social-links {
+      margin-top: 30px;
+    }
+    .social-links a {
+      color: #ddd;
+      font-size: 2em;
+      margin: 0 20px;
+      transition: transform 0.3s ease;
+    }
+    .social-links a:hover {
+      transform: scale(1.2);
+      color: #fff;
+    }
+    .form-container {
+      display: none;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 80%;
+      padding: 10px;
+      border: 1px solid #555;
+      border-radius: 8px;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #fff;
+    }
+    .btn {
+      padding: 12px 30px;
+      background-color: #eee;
+      color: #333;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #ddd;
+      transform: translateY(-2px);
+    }
+    .welcome-container {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 800px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+      border: 2px solid #555;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #fff;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #666;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #ddd;
+      font-size: 0.9em;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2em;
+      }
+      .header-nav {
+        flex-direction: column;
+      }
+      .header-nav a {
+        margin: 10px 0;
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <h1>Blog Indra</h1>
+    <nav class="header-nav">
+      <a href="#" onclick="showSection('home')">Beranda</a>
+      <a href="#" onclick="showSection('video')">Konten</a>
+      <a href="#" onclick="showSection('login')">Login</a>
+      <a href="#" onclick="showSection('callCenter')">Call Center</a>
+      <a href="#" onclick="showSection('callCenter2')">Call Center 2</a>
+      <a href="#" onclick="showSection('list')">List</a>
+      <a href="#" onclick="showSection('tabel')">Tabel Penjualan</a>
+    </nav>
+  </header>
+
+  <!-- Beranda -->
+  <section id="home" class="welcome-section">
+    <div class="welcome-container">
+      <h2>Selamat Datang di Blog Indra!</h2>
+      <p>Temukan inspirasi, cerita, dan pengalaman menarik di setiap sudut halaman ini. Bersiaplah untuk petualangan yang tak terlupakan!</p>
+      <p>Jelajahi dunia melalui lensa Indra Adrian Syahrir. Selamat menikmati setiap momen!</p>
+      <div class="social-links">
+        <a href="https://youtube.com/@indraadriann" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@26indraardrnn" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/indraadrnnn" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section id="video" class="welcome-section" style="display: none;">
+    <h2>Video Terbaru</h2>
+    <div class="video-container">
+      <iframe id="youtube-iframe" width="100%" height="450" src="https://www.youtube.com/embed/t3OGWHApZlo?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Login -->
+  <section id="login" class="form-container">
+    <h2>Login</h2>
+    <form>
+      <div class="form-group">
+        <label>Username:</label>
+        <input type="text" />
+      </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" />
+      </div>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </section>
+
+  <!-- Register -->
+  <section id="register" class="form-container">
+    <h2>Daftar</h2>
+    <form>
+      <div class="form-group">
+        <label>Username:</label>
+        <input type="text" />
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" />
+      </div>
+      <div class="form-group">
+        <label>Jenis Kelamin:</label>
+        <select>
+          <option>Pria</option>
+          <option>Wanita</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" />
+      </div>
+      <button type="submit" class="btn">Daftar</button>
+    </form>
+  </section>
+
+  <!-- Call Center -->
+  <section id="callCenter" class="form-container">
+    <h2>Call Center</h2>
+    <form>
+      <div class="form-group">
+        <label>Username:</label>
+        <input type="text" />
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" />
+      </div>
+      <div class="form-group">
+        <label>Pesan Anda:</label>
+        <textarea rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <!-- Call Center 2 -->
+  <section id="callCenter2" class="form-container">
+    <h2>Call Center 2</h2>
+    <form>
+      <div class="form-group">
+        <label>Masukkan Alamat Web:</label>
+        <input type="url" />
+      </div>
+      <div class="form-group">
+        <label>Tanggal Cek:</label>
+        <input type="date" />
+      </div>
+      <div class="form-group">
+        <label>Jumlah Pengunjung:</label>
+        <input type="number" min="1" />
+      </div>
+      <button type="submit" class="btn">Kirim</button>
+    </form>
+  </section>
+
+  <!-- LIST -->
+  <section id="list" class="welcome-section" style="display: none;">
+    <div class="welcome-container">
+      <h2>Contoh List</h2>
+      <h3>Ordered List</h3>
+      <ol>
+        <li>Membaca</li>
+        <li>Menulis</li>
+        <li>Belajar</li>
+        <li>Istirahat</li>
+      </ol>
+      <h3>Unordered List</h3>
+      <ul>
+        <li>Pensil</li>
+        <li>Penghapus</li>
+        <li>Buku</li>
+        <li>Penggaris</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TABEL -->
+  <section id="tabel" class="welcome-section" style="display: none;">
+    <div class="welcome-container">
+      <h2>Tabel Penjualan Alat Tulis</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Produk</th>
+            <th>Jumlah Terjual</th>
+            <th>Harga Satuan</th>
+            <th>Total Penjualan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Pensil</td><td>120</td><td>Rp 2.000</td><td>Rp 240.000</td></tr>
+          <tr><td>2</td><td>Pulpen</td><td>80</td><td>Rp 3.000</td><td>Rp 240.000</td></tr>
+          <tr><td>3</td><td>Penghapus</td><td>50</td><td>Rp 1.500</td><td>Rp 75.000</td></tr>
+          <tr><td>4</td><td>Penggaris</td><td>40</td><td>Rp 2.500</td><td>Rp 100.000</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Indra Adrian Syahrir</p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => {
+        section.style.display = "none";
+      });
+      document.getElementById(sectionId).style.display = "block";
+    }
+
+    // default tampilkan beranda
+    showSection('home');
+  </script>
+</body>
+</html>
